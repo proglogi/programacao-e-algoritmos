@@ -8,38 +8,30 @@
 using namespace std; 
 
 int main () { 
-    int valor [2][3]; 
-    int soma = 0; 
-    int soma1 = 0; 
-    int soma2 = 0; 
+    int matriz[2][3]; // Agora é uma matriz 2x3
+    int soma_linha0 = 0; 
 
-    cout<< "Digite os valores da matriz [2][3]: \n"; 
+    cout<< "Digite os elementos da matriz 2x3:\n"; 
     for (int i=0; i < 2; i++) { 
         for (int j=0; j < 3; j++) { 
-            cout<< "Valor["<<i<<"]["<<j<<"]\n"; 
-            cin>> valor[i][j]; //até aqui, apenas capturamos o valor 
-            soma += valor [i][j]; 
-            soma1 += valor [i][0]; 
-            soma2 += valor [0][j]; 
-        } 
+            cout<< "Elemento ["<< i <<"][" << j << "]:"; 
+            cin>> matriz[i][j];  
+            } 
     } 
 
-    //Exibir o que já populei 
-    cout<< "\nValores digitados: "; 
-    for (int i=0; i < 2; i++) { 
-        for (int j=0; j < 3; j++) { 
-            cout<< valor [i][j]; 
-        } 
-    } 
+    //Soma apenas a primeira linha (i == 0) 
+    for (int j = 0; j < 3; j++){
+        soma_linha0 += matriz[0][j];
+    }
 
-    cout<< "\nValores digitados em i: \n"; 
-    for (int i=0; i < 3; i++) { 
-            cout<< valor [i]; 
-        } 
+    cout << "Matriz digitada:\n";
+    for (int i = 0; i < 2; i++){
+        for (int j = 0; j < 3; j++){
+            cout << matriz[i][j] << " ";
+        }
+    }
 
-    cout<< "\nSoma: "<< soma; 
-    cout<< "\nSoma: "<< soma1; 
-    cout<< "\nSoma: "<< soma2; 
+    cout<< "\nSoma dos elementos da linha 0: " << soma_linha0 << endl;
 
     return 0; 
 } 
