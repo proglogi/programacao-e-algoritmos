@@ -24,6 +24,7 @@ int main() {
     // Exibição inicial da torre
     cout << "Torre Inicial:\n";
     for (int linha=0; linha < 18; ++linha){
+        cout << "\n";
         for (int coluna = 0; coluna < 3; ++coluna){
             //Exibição da matriz
             cout << "Torre [" << linha << "][" << coluna << "] = " << torre[linha][coluna] << endl;
@@ -42,6 +43,8 @@ int main() {
 
     //Remover peça escolhida e deixar o espaço vazio (0)
     
-    //
+    //Validar se a coluna vai cair
+    //(for, if, or)Com 2 validações, se uma linha tiver mais que 3 '0's, mostrar ao jogador: você perdeu 
+    //Tentar resolver problema dentro do for do end.
     return 0;
 }
